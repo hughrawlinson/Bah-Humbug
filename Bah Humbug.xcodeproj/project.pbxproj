@@ -11,7 +11,21 @@
 		1E84D8B01D2BD7FC00CBD702 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E84D8AF1D2BD7FC00CBD702 /* ViewController.swift */; };
 		1E84D8B21D2BD7FC00CBD702 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E84D8B11D2BD7FC00CBD702 /* Assets.xcassets */; };
 		1E84D8B51D2BD7FC00CBD702 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E84D8B31D2BD7FC00CBD702 /* Main.storyboard */; };
+		7718B6CFD47C755F9FB337C7 /* Pods_Bah_Humbug.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAD7B6FD79E581788732C3EF /* Pods_Bah_Humbug.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		1E84D8BF1D2BD81400CBD702 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		1E84D8AA1D2BD7FC00CBD702 /* Bah Humbug.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bah Humbug.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -20,6 +34,9 @@
 		1E84D8B11D2BD7FC00CBD702 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1E84D8B41D2BD7FC00CBD702 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1E84D8B61D2BD7FC00CBD702 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4B5FC1D78A10E22390BCE622 /* Pods-Bah Humbug.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bah Humbug.release.xcconfig"; path = "Pods/Target Support Files/Pods-Bah Humbug/Pods-Bah Humbug.release.xcconfig"; sourceTree = "<group>"; };
+		58A03E3BEB21EC208F06DD4D /* Pods-Bah Humbug.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bah Humbug.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Bah Humbug/Pods-Bah Humbug.debug.xcconfig"; sourceTree = "<group>"; };
+		EAD7B6FD79E581788732C3EF /* Pods_Bah_Humbug.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bah_Humbug.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +44,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7718B6CFD47C755F9FB337C7 /* Pods_Bah_Humbug.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,6 +56,8 @@
 			children = (
 				1E84D8AC1D2BD7FC00CBD702 /* Bah Humbug */,
 				1E84D8AB1D2BD7FC00CBD702 /* Products */,
+				B3595D599DC94DB17843E67F /* Pods */,
+				A37C9F2EF84B42DAB0E1A6FC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -61,6 +81,23 @@
 			path = "Bah Humbug";
 			sourceTree = "<group>";
 		};
+		A37C9F2EF84B42DAB0E1A6FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EAD7B6FD79E581788732C3EF /* Pods_Bah_Humbug.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B3595D599DC94DB17843E67F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				58A03E3BEB21EC208F06DD4D /* Pods-Bah Humbug.debug.xcconfig */,
+				4B5FC1D78A10E22390BCE622 /* Pods-Bah Humbug.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -68,9 +105,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1E84D8B91D2BD7FC00CBD702 /* Build configuration list for PBXNativeTarget "Bah Humbug" */;
 			buildPhases = (
+				A7A1E9ADACE24B10A644A3F4 /* [CP] Check Pods Manifest.lock */,
 				1E84D8A61D2BD7FC00CBD702 /* Sources */,
 				1E84D8A71D2BD7FC00CBD702 /* Frameworks */,
 				1E84D8A81D2BD7FC00CBD702 /* Resources */,
+				1E84D8BF1D2BD81400CBD702 /* Embed Frameworks */,
+				E629CBA2426CB15B4E0FF638 /* [CP] Embed Pods Frameworks */,
+				B878613139D1D5F9467D927D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -125,6 +166,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A7A1E9ADACE24B10A644A3F4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B878613139D1D5F9467D927D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Bah Humbug/Pods-Bah Humbug-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E629CBA2426CB15B4E0FF638 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Bah Humbug/Pods-Bah Humbug-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1E84D8A61D2BD7FC00CBD702 /* Sources */ = {
@@ -234,6 +323,7 @@
 		};
 		1E84D8BA1D2BD7FC00CBD702 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 58A03E3BEB21EC208F06DD4D /* Pods-Bah Humbug.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -246,6 +336,7 @@
 		};
 		1E84D8BB1D2BD7FC00CBD702 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4B5FC1D78A10E22390BCE622 /* Pods-Bah Humbug.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -275,6 +366,7 @@
 				1E84D8BB1D2BD7FC00CBD702 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

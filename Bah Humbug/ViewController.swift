@@ -31,7 +31,7 @@ class ViewController: NSViewController {
     }
 
     @IBAction func sliderUpdated(sender: AnyObject) {
-        osc.baseFrequency = baseFreq(freqSlider.intValue)
+        osc.baseFrequency = baseFreq(freqSlider.doubleValue)
         osc.carrierMultiplier = carrierScalarSlider.doubleValue
     }
     
@@ -39,8 +39,8 @@ class ViewController: NSViewController {
         NSApplication.sharedApplication().terminate(0)
     }
     
-    func baseFreq(sliderVal: Int32) -> Double {
-        return Int(sliderVal).midiNoteToFrequency()
+    func baseFreq(sliderVal: Double) -> Double {
+        return sliderVal.midiNoteToFrequency()
     }
     
     @IBAction func toggleAudio(sender: AnyObject) {

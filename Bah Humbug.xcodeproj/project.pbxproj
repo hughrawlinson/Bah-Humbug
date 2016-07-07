@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E1C5A611D2CE653008DCE32 /* FMSynthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1C5A601D2CE653008DCE32 /* FMSynthViewController.swift */; };
+		1E1C5A671D2D1081008DCE32 /* TabContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1C5A661D2D1081008DCE32 /* TabContainerViewController.swift */; };
 		1E84D8AE1D2BD7FC00CBD702 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E84D8AD1D2BD7FC00CBD702 /* AppDelegate.swift */; };
 		1E84D8B01D2BD7FC00CBD702 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E84D8AF1D2BD7FC00CBD702 /* ViewController.swift */; };
 		1E84D8B21D2BD7FC00CBD702 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E84D8B11D2BD7FC00CBD702 /* Assets.xcassets */; };
@@ -28,6 +30,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1E1C5A601D2CE653008DCE32 /* FMSynthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FMSynthViewController.swift; sourceTree = "<group>"; };
+		1E1C5A661D2D1081008DCE32 /* TabContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabContainerViewController.swift; sourceTree = "<group>"; };
 		1E84D8AA1D2BD7FC00CBD702 /* Bah Humbug.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bah Humbug.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E84D8AD1D2BD7FC00CBD702 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1E84D8AF1D2BD7FC00CBD702 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -72,10 +76,12 @@
 		1E84D8AC1D2BD7FC00CBD702 /* Bah Humbug */ = {
 			isa = PBXGroup;
 			children = (
+				1E84D8B31D2BD7FC00CBD702 /* Main.storyboard */,
 				1E84D8AD1D2BD7FC00CBD702 /* AppDelegate.swift */,
+				1E1C5A661D2D1081008DCE32 /* TabContainerViewController.swift */,
+				1E1C5A601D2CE653008DCE32 /* FMSynthViewController.swift */,
 				1E84D8AF1D2BD7FC00CBD702 /* ViewController.swift */,
 				1E84D8B11D2BD7FC00CBD702 /* Assets.xcassets */,
-				1E84D8B31D2BD7FC00CBD702 /* Main.storyboard */,
 				1E84D8B61D2BD7FC00CBD702 /* Info.plist */,
 			);
 			path = "Bah Humbug";
@@ -221,6 +227,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				1E84D8B01D2BD7FC00CBD702 /* ViewController.swift in Sources */,
+				1E1C5A671D2D1081008DCE32 /* TabContainerViewController.swift in Sources */,
+				1E1C5A611D2CE653008DCE32 /* FMSynthViewController.swift in Sources */,
 				1E84D8AE1D2BD7FC00CBD702 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

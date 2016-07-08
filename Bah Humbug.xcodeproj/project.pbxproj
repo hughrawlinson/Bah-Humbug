@@ -9,8 +9,10 @@
 /* Begin PBXBuildFile section */
 		1E1C5A611D2CE653008DCE32 /* FMSynthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1C5A601D2CE653008DCE32 /* FMSynthViewController.swift */; };
 		1E1C5A671D2D1081008DCE32 /* TabContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1C5A661D2D1081008DCE32 /* TabContainerViewController.swift */; };
+		1E73C3871D2FDAC30034A356 /* SubSynthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E73C3861D2FDAC30034A356 /* SubSynthViewController.swift */; };
+		1E73C3891D2FE1800034A356 /* SynthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E73C3881D2FE1800034A356 /* SynthViewController.swift */; };
+		1E73C38B1D2FE20F0034A356 /* SynthController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E73C38A1D2FE20F0034A356 /* SynthController.swift */; };
 		1E84D8AE1D2BD7FC00CBD702 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E84D8AD1D2BD7FC00CBD702 /* AppDelegate.swift */; };
-		1E84D8B01D2BD7FC00CBD702 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E84D8AF1D2BD7FC00CBD702 /* ViewController.swift */; };
 		1E84D8B21D2BD7FC00CBD702 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E84D8B11D2BD7FC00CBD702 /* Assets.xcassets */; };
 		1E84D8B51D2BD7FC00CBD702 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E84D8B31D2BD7FC00CBD702 /* Main.storyboard */; };
 		7718B6CFD47C755F9FB337C7 /* Pods_Bah_Humbug.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAD7B6FD79E581788732C3EF /* Pods_Bah_Humbug.framework */; };
@@ -32,9 +34,11 @@
 /* Begin PBXFileReference section */
 		1E1C5A601D2CE653008DCE32 /* FMSynthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FMSynthViewController.swift; sourceTree = "<group>"; };
 		1E1C5A661D2D1081008DCE32 /* TabContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabContainerViewController.swift; sourceTree = "<group>"; };
+		1E73C3861D2FDAC30034A356 /* SubSynthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubSynthViewController.swift; sourceTree = "<group>"; };
+		1E73C3881D2FE1800034A356 /* SynthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SynthViewController.swift; sourceTree = "<group>"; };
+		1E73C38A1D2FE20F0034A356 /* SynthController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SynthController.swift; sourceTree = "<group>"; };
 		1E84D8AA1D2BD7FC00CBD702 /* Bah Humbug.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bah Humbug.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E84D8AD1D2BD7FC00CBD702 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1E84D8AF1D2BD7FC00CBD702 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1E84D8B11D2BD7FC00CBD702 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1E84D8B41D2BD7FC00CBD702 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1E84D8B61D2BD7FC00CBD702 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -55,6 +59,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1E73C38C1D2FE3900034A356 /* Synth View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				1E73C3881D2FE1800034A356 /* SynthViewController.swift */,
+				1E1C5A601D2CE653008DCE32 /* FMSynthViewController.swift */,
+				1E73C3861D2FDAC30034A356 /* SubSynthViewController.swift */,
+			);
+			name = "Synth View Controllers";
+			sourceTree = "<group>";
+		};
 		1E84D8A11D2BD7FC00CBD702 = {
 			isa = PBXGroup;
 			children = (
@@ -76,11 +90,11 @@
 		1E84D8AC1D2BD7FC00CBD702 /* Bah Humbug */ = {
 			isa = PBXGroup;
 			children = (
+				1E73C38C1D2FE3900034A356 /* Synth View Controllers */,
 				1E84D8B31D2BD7FC00CBD702 /* Main.storyboard */,
 				1E84D8AD1D2BD7FC00CBD702 /* AppDelegate.swift */,
 				1E1C5A661D2D1081008DCE32 /* TabContainerViewController.swift */,
-				1E1C5A601D2CE653008DCE32 /* FMSynthViewController.swift */,
-				1E84D8AF1D2BD7FC00CBD702 /* ViewController.swift */,
+				1E73C38A1D2FE20F0034A356 /* SynthController.swift */,
 				1E84D8B11D2BD7FC00CBD702 /* Assets.xcassets */,
 				1E84D8B61D2BD7FC00CBD702 /* Info.plist */,
 			);
@@ -226,9 +240,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1E84D8B01D2BD7FC00CBD702 /* ViewController.swift in Sources */,
+				1E73C3891D2FE1800034A356 /* SynthViewController.swift in Sources */,
 				1E1C5A671D2D1081008DCE32 /* TabContainerViewController.swift in Sources */,
 				1E1C5A611D2CE653008DCE32 /* FMSynthViewController.swift in Sources */,
+				1E73C3871D2FDAC30034A356 /* SubSynthViewController.swift in Sources */,
+				1E73C38B1D2FE20F0034A356 /* SynthController.swift in Sources */,
 				1E84D8AE1D2BD7FC00CBD702 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

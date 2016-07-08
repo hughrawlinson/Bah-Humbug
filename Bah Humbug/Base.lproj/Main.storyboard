@@ -73,19 +73,70 @@
                         </connections>
                     </window>
                     <connections>
-                        <segue destination="Op7-65-5v0" kind="relationship" relationship="window.shadowedContentViewController" id="6ct-9q-2hJ"/>
+                        <segue destination="fYB-iD-aLb" kind="relationship" relationship="window.shadowedContentViewController" id="gm6-0s-E9u"/>
                     </connections>
                 </windowController>
                 <customObject id="Oky-zY-oP4" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="75" y="250"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="iw0-qO-a0u">
+            <objects>
+                <viewController id="fYB-iD-aLb" sceneMemberID="viewController">
+                    <view key="view" id="mpb-sd-47K">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <containerView id="bc8-cW-ibz">
+                                <rect key="frame" x="0.0" y="0.0" width="450" height="216"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <connections>
+                                    <segue destination="Op7-65-5v0" kind="embed" id="EjS-6k-iVe"/>
+                                </connections>
+                            </containerView>
+                            <slider verticalHuggingPriority="750" id="K7m-IS-NXc">
+                                <rect key="frame" x="18" y="230" width="414" height="25"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <sliderCell key="cell" continuous="YES" state="on" alignment="left" maxValue="100" doubleValue="50" tickMarkPosition="above" numberOfTickMarks="101" allowsTickMarkValuesOnly="YES" sliderType="linear" id="zA1-U2-c9g"/>
+                                <connections>
+                                    <action selector="sliderUpdated:" target="yt6-cb-WSe" id="4vF-fH-BeB"/>
+                                </connections>
+                            </slider>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="too-sD-Vho">
+                                <rect key="frame" x="18" y="263" width="102" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Base Frequency" id="do8-oA-82G">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <button id="cGY-gP-szZ">
+                                <rect key="frame" x="379" y="264" width="53" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="check" title="Mute" bezelStyle="regularSquare" imagePosition="left" alignment="center" inset="2" id="bOa-tY-8CJ">
+                                    <behavior key="behavior" pushIn="YES" changeContents="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="toggleAudio:" target="yt6-cb-WSe" id="YKr-2m-waI"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                    </view>
+                </viewController>
+                <customObject id="DcE-es-Hdg" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="76" y="702"/>
+        </scene>
         <!--Tab Container View Controller-->
         <scene sceneID="DoM-xb-Xa8">
             <objects>
-                <tabViewController id="Op7-65-5v0" customClass="TabContainerViewController" customModule="Bah_Humbug" customModuleProvider="target" sceneMemberID="viewController">
+                <tabViewController selectedTabViewItemIndex="0" id="Op7-65-5v0" customClass="TabContainerViewController" customModule="Bah_Humbug" customModuleProvider="target" sceneMemberID="viewController">
                     <tabViewItems>
                         <tabViewItem id="lrm-eu-hoc"/>
+                        <tabViewItem id="AwU-1s-ymg"/>
                     </tabViewItems>
                     <tabView key="tabView" type="noTabsNoBorder" id="q0n-qD-IuE">
                         <rect key="frame" x="-14" y="-12" width="483" height="312"/>
@@ -95,39 +146,23 @@
                     </tabView>
                     <connections>
                         <segue destination="yt6-cb-WSe" kind="relationship" relationship="tabItems" id="MKr-CN-eea"/>
+                        <segue destination="ADG-Ev-6Pq" kind="relationship" relationship="tabItems" id="EK9-vf-f4b"/>
                     </connections>
                 </tabViewController>
                 <customObject id="dOl-CP-j2l" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="76.5" y="719"/>
+            <point key="canvasLocation" x="76" y="1135"/>
         </scene>
-        <!--FM Synth-->
+        <!--Frequency Modulation Synth-->
         <scene sceneID="cu7-CL-aYs">
             <objects>
-                <viewController title="FM Synth" storyboardIdentifier="fmsynthcontroller" id="yt6-cb-WSe" customClass="FMSynthViewController" customModule="Bah_Humbug" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Frequency Modulation Synth" storyboardIdentifier="fmsynthcontroller" id="yt6-cb-WSe" customClass="FMSynthViewController" customModule="Bah_Humbug" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="uvm-tC-MM0">
                         <rect key="frame" x="0.0" y="0.0" width="483" height="312"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <slider verticalHuggingPriority="750" id="4lj-AL-YKs">
-                                <rect key="frame" x="18" y="242" width="447" height="25"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                <sliderCell key="cell" continuous="YES" state="on" alignment="left" maxValue="100" doubleValue="50" tickMarkPosition="above" numberOfTickMarks="101" allowsTickMarkValuesOnly="YES" sliderType="linear" id="dRy-k0-dds"/>
-                                <connections>
-                                    <action selector="sliderUpdated:" target="yt6-cb-WSe" id="edH-QG-pvZ"/>
-                                </connections>
-                            </slider>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="yOI-Ai-goq">
-                                <rect key="frame" x="18" y="275" width="102" height="17"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Base Frequency" id="UbH-hP-fC7">
-                                    <font key="font" metaFont="system"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="4v1-hp-MYu">
-                                <rect key="frame" x="18" y="219" width="136" height="17"/>
+                                <rect key="frame" x="18" y="275" width="136" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Carrier Scaling Factor" id="AgH-dx-dbj">
                                     <font key="font" metaFont="system"/>
@@ -136,35 +171,77 @@
                                 </textFieldCell>
                             </textField>
                             <slider verticalHuggingPriority="750" id="tkl-YY-qoN">
-                                <rect key="frame" x="18" y="186" width="447" height="25"/>
+                                <rect key="frame" x="18" y="242" width="447" height="25"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <sliderCell key="cell" continuous="YES" state="on" alignment="left" maxValue="8" doubleValue="1" tickMarkPosition="above" numberOfTickMarks="33" allowsTickMarkValuesOnly="YES" sliderType="linear" id="qLM-ro-slj"/>
                                 <connections>
                                     <action selector="sliderUpdated:" target="yt6-cb-WSe" id="DtA-Ig-PNU"/>
                                 </connections>
                             </slider>
-                            <button id="7wE-3X-r5Z">
-                                <rect key="frame" x="18" y="18" width="53" height="18"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <buttonCell key="cell" type="check" title="Mute" bezelStyle="regularSquare" imagePosition="left" alignment="center" inset="2" id="AHc-PU-mA0">
-                                    <behavior key="behavior" pushIn="YES" changeContents="YES" lightByContents="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <connections>
-                                    <action selector="toggleAudio:" target="yt6-cb-WSe" id="cNT-vh-vE8"/>
-                                </connections>
-                            </button>
                         </subviews>
                     </view>
                     <connections>
                         <outlet property="carrierScalarSlider" destination="tkl-YY-qoN" id="MDF-9r-wJQ"/>
-                        <outlet property="freqSlider" destination="4lj-AL-YKs" id="1mC-dA-okC"/>
-                        <outlet property="muteButton" destination="7wE-3X-r5Z" id="UsR-10-ujH"/>
                     </connections>
                 </viewController>
                 <customObject id="HSl-j8-lJI" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="76.5" y="1199"/>
+            <point key="canvasLocation" x="76.5" y="1615"/>
+        </scene>
+        <!--Subtractive Synth-->
+        <scene sceneID="AoE-nh-k4A">
+            <objects>
+                <viewController title="Subtractive Synth" id="ADG-Ev-6Pq" customClass="SubSynthViewController" customModule="Bah_Humbug" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="a01-Uo-Rvn">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="312"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="knf-g7-Y6q">
+                                <rect key="frame" x="18" y="275" width="71" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Osc 1 Type" id="iiY-c9-KL0">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <popUpButton verticalHuggingPriority="750" id="bwG-jp-lfS">
+                                <rect key="frame" x="18" y="243" width="76" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <popUpButtonCell key="cell" type="push" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" id="81S-GG-aQr">
+                                    <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="menu"/>
+                                    <menu key="menu" id="EeP-A9-Zqp"/>
+                                </popUpButtonCell>
+                            </popUpButton>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="eMK-2B-aIw">
+                                <rect key="frame" x="18" y="221" width="73" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Osc 2 Type" id="lwV-sZ-DDX">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <popUpButton verticalHuggingPriority="750" id="h2Z-C5-706">
+                                <rect key="frame" x="18" y="189" width="76" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <popUpButtonCell key="cell" type="push" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" id="XjI-9v-bAu">
+                                    <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="menu"/>
+                                    <menu key="menu" id="iM9-IF-duz"/>
+                                </popUpButtonCell>
+                            </popUpButton>
+                        </subviews>
+                    </view>
+                    <connections>
+                        <outlet property="Osc1Type" destination="bwG-jp-lfS" id="lPg-rr-UY0"/>
+                        <outlet property="Osc2Type" destination="h2Z-C5-706" id="Q7a-GO-q1x"/>
+                    </connections>
+                </viewController>
+                <customObject id="jc9-c0-o3B" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="567" y="1615"/>
         </scene>
     </scenes>
 </document>

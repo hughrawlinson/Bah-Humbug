@@ -8,35 +8,22 @@
 
 import Cocoa
 import AVFoundation
-import AudioKit
 
 class FMSynthViewController: NSViewController {
-    @IBOutlet weak var freqSlider :NSSlider!
     @IBOutlet weak var carrierScalarSlider :NSSlider!
-    @IBOutlet weak var muteButton :NSButton!
-    let osc = AKFMOscillator()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
-        AudioKit.output = osc
-        AudioKit.start()
-        osc.start()
+    }
+    
+    override func viewWillDisappear() {
+        // Stop the audio
     }
     
     @IBAction func sliderUpdated(sender: AnyObject) {
-        osc.baseFrequency = baseFreq(freqSlider.doubleValue)
-        osc.carrierMultiplier = carrierScalarSlider.doubleValue
-    }
-    
-    func baseFreq(sliderVal: Double) -> Double {
-        return sliderVal.midiNoteToFrequency()
-    }
-    
-    @IBAction func toggleAudio(sender: AnyObject) {
-        //renderingAudio = !renderingAudio
-        muteButton.doubleValue <= 0 ? osc.start() : osc.stop()
+        // Set carrier frequency
     }
 }
 

@@ -10,20 +10,25 @@ import Cocoa
 import AVFoundation
 
 class FMSynthViewController: NSViewController {
+    weak var delegate:FMSynthViewControllerDelegate?
+    
     @IBOutlet weak var carrierScalarSlider :NSSlider!
+    @IBOutlet weak var modulationScalarSlider: NSSlider!
+    @IBOutlet weak var modulationIndexSlider: NSSlider!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Do any additional setup after loading the view.
     }
     
     override func viewWillDisappear() {
-        // Stop the audio
+        super.viewWillDisappear()
     }
     
     @IBAction func sliderUpdated(sender: AnyObject) {
-        // Set carrier frequency
+        self.delegate?.sliderUpdated(self)
     }
 }
 
+protocol FMSynthViewControllerDelegate: class {
+    func sliderUpdated(sender: FMSynthViewController)
+}

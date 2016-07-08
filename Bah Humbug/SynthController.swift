@@ -6,19 +6,19 @@
 //  Copyright © 2016 Hugh Rawlinson. All rights reserved.
 //
 
-import AudioKit
+//import AudioKit
 
 class SynthController {
     var synths = [String: Synth]()
-    var vol = AKNode()
+    //var vol = AKNode()
 
     init () {
         synths.updateValue(FMSynth(), forKey: "FMSynth")
         synths.updateValue(SubSynth(), forKey: "SubSynth")
         
-        synths.values.first?.getOutputNode().addConnectionPoint(vol)
+//        synths.values.first?.getOutputNode().addConnectionPoint(vol)
         
-        AudioKit.output = vol
+        // AudioKit.output = vol
     }
     
     func setFrequency(freq :Double) {
@@ -29,17 +29,17 @@ class SynthController {
     
     func setOutput(key: String){
         
-        AudioKit.output = synths[key]?.getOutputNode()
+//        AudioKit.output = synths[key]?.getOutputNode()
     }
     
     func setMute(mute :Bool) {
-        mute ? AudioKit.stop() : AudioKit.start()
+//        mute ? AudioKit.stop() : AudioKit.start()
     }
 }
 
 class Synth {
     func setFrequency(freq: Double){}
-    func getOutputNode() -> AKNode {return AKNode()}
+//    func getOutputNode() -> AKNode {return AKNode()}
 }
 
 class FMSynth :Synth {

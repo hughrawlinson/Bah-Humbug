@@ -15,6 +15,7 @@
 		1E84D8AE1D2BD7FC00CBD702 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E84D8AD1D2BD7FC00CBD702 /* AppDelegate.swift */; };
 		1E84D8B21D2BD7FC00CBD702 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E84D8B11D2BD7FC00CBD702 /* Assets.xcassets */; };
 		1E84D8B51D2BD7FC00CBD702 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E84D8B31D2BD7FC00CBD702 /* Main.storyboard */; };
+		1EDA18041D300F5E0080096E /* PreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDA18031D300F5E0080096E /* PreferencesViewController.swift */; };
 		7718B6CFD47C755F9FB337C7 /* Pods_Bah_Humbug.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAD7B6FD79E581788732C3EF /* Pods_Bah_Humbug.framework */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +43,7 @@
 		1E84D8B11D2BD7FC00CBD702 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1E84D8B41D2BD7FC00CBD702 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1E84D8B61D2BD7FC00CBD702 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1EDA18031D300F5E0080096E /* PreferencesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreferencesViewController.swift; sourceTree = "<group>"; };
 		4B5FC1D78A10E22390BCE622 /* Pods-Bah Humbug.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bah Humbug.release.xcconfig"; path = "Pods/Target Support Files/Pods-Bah Humbug/Pods-Bah Humbug.release.xcconfig"; sourceTree = "<group>"; };
 		58A03E3BEB21EC208F06DD4D /* Pods-Bah Humbug.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bah Humbug.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Bah Humbug/Pods-Bah Humbug.debug.xcconfig"; sourceTree = "<group>"; };
 		EAD7B6FD79E581788732C3EF /* Pods_Bah_Humbug.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bah_Humbug.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -62,7 +64,6 @@
 		1E73C38C1D2FE3900034A356 /* Synth View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				1E73C3881D2FE1800034A356 /* SynthViewController.swift */,
 				1E1C5A601D2CE653008DCE32 /* FMSynthViewController.swift */,
 				1E73C3861D2FDAC30034A356 /* SubSynthViewController.swift */,
 			);
@@ -90,6 +91,7 @@
 		1E84D8AC1D2BD7FC00CBD702 /* Bah Humbug */ = {
 			isa = PBXGroup;
 			children = (
+				1E73C3881D2FE1800034A356 /* SynthViewController.swift */,
 				1E73C38C1D2FE3900034A356 /* Synth View Controllers */,
 				1E84D8B31D2BD7FC00CBD702 /* Main.storyboard */,
 				1E84D8AD1D2BD7FC00CBD702 /* AppDelegate.swift */,
@@ -97,6 +99,7 @@
 				1E73C38A1D2FE20F0034A356 /* SynthController.swift */,
 				1E84D8B11D2BD7FC00CBD702 /* Assets.xcassets */,
 				1E84D8B61D2BD7FC00CBD702 /* Info.plist */,
+				1EDA18031D300F5E0080096E /* PreferencesViewController.swift */,
 			);
 			path = "Bah Humbug";
 			sourceTree = "<group>";
@@ -245,6 +248,7 @@
 				1E1C5A611D2CE653008DCE32 /* FMSynthViewController.swift in Sources */,
 				1E73C3871D2FDAC30034A356 /* SubSynthViewController.swift in Sources */,
 				1E73C38B1D2FE20F0034A356 /* SynthController.swift in Sources */,
+				1EDA18041D300F5E0080096E /* PreferencesViewController.swift in Sources */,
 				1E84D8AE1D2BD7FC00CBD702 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

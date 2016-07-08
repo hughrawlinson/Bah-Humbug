@@ -11,15 +11,5 @@ import Cocoa
 class TabContainerViewController :NSTabViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        NSNotificationCenter.defaultCenter().addObserver(self,
-                                                         selector:(#selector(NSWindowDelegate.windowWillClose(_:))),
-                                                         name:NSWindowWillCloseNotification,
-                                                         object:self)
-    }
-    
-    func windowWillClose(notification: NSNotification) {
-        print("Message Recieved")
-        NSApplication.sharedApplication().terminate(0)
     }
 }

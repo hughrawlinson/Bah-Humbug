@@ -48,6 +48,26 @@
                                     </items>
                                 </menu>
                             </menuItem>
+                            <menuItem title="Edit" id="Y26-fj-ori">
+                                <attributedString key="attributedTitle">
+                                    <fragment content="File">
+                                        <attributes>
+                                            <font key="NSFont" metaFont="smallSystem"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <menu key="submenu" title="Edit" id="nl3-Or-2sU">
+                                    <items>
+                                        <menuItem title="Preferences" keyEquivalent="," id="jNY-lk-wh3">
+                                            <connections>
+                                                <segue destination="tS5-Fl-maP" kind="modal" id="98W-ri-F63"/>
+                                            </connections>
+                                        </menuItem>
+                                    </items>
+                                </menu>
+                            </menuItem>
                         </items>
                     </menu>
                     <connections>
@@ -59,6 +79,45 @@
             </objects>
             <point key="canvasLocation" x="75" y="0.0"/>
         </scene>
+        <!--Preferences View Controller-->
+        <scene sceneID="IGw-Ab-dZj">
+            <objects>
+                <viewController id="tS5-Fl-maP" customClass="PreferencesViewController" customModule="Bah_Humbug" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="nSd-f9-bjI">
+                        <rect key="frame" x="0.0" y="0.0" width="386" height="98"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="OYO-a2-VDQ">
+                                <rect key="frame" x="18" y="61" width="84" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Audio Device" id="4Ji-qt-pD4">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <popUpButton verticalHuggingPriority="750" id="KEx-0L-5av">
+                                <rect key="frame" x="18" y="29" width="351" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <popUpButtonCell key="cell" type="push" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" id="vyH-vo-Pb3">
+                                    <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="menu"/>
+                                    <menu key="menu" id="JbI-7l-RXr"/>
+                                    <connections>
+                                        <action selector="audioDeviceChanged:" target="tS5-Fl-maP" id="a09-cX-ZLA"/>
+                                    </connections>
+                                </popUpButtonCell>
+                            </popUpButton>
+                        </subviews>
+                    </view>
+                    <connections>
+                        <outlet property="audioDeviceSelector" destination="vyH-vo-Pb3" id="t2Z-XR-qnd"/>
+                    </connections>
+                </viewController>
+                <customObject id="Lj9-kd-iYN" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="642" y="238"/>
+        </scene>
         <!--Window Controller-->
         <scene sceneID="R2V-B0-nI4">
             <objects>
@@ -66,7 +125,7 @@
                     <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-                        <rect key="contentRect" x="196" y="240" width="480" height="270"/>
+                        <rect key="contentRect" x="196" y="240" width="480" height="282"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1440" height="900"/>
                         <connections>
                             <binding destination="B8D-0N-5wS" name="representedFilename" keyPath="self.window" id="rCc-38-6Fm"/>
@@ -78,12 +137,12 @@
                 </windowController>
                 <customObject id="Oky-zY-oP4" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="250"/>
+            <point key="canvasLocation" x="53" y="256"/>
         </scene>
-        <!--View Controller-->
+        <!--Synth View Controller-->
         <scene sceneID="iw0-qO-a0u">
             <objects>
-                <viewController id="fYB-iD-aLb" sceneMemberID="viewController">
+                <viewController id="fYB-iD-aLb" customClass="SynthViewController" customModule="Bah_Humbug" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="mpb-sd-47K">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -92,7 +151,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="450" height="216"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <connections>
-                                    <segue destination="Op7-65-5v0" kind="embed" id="EjS-6k-iVe"/>
+                                    <segue destination="yt6-cb-WSe" kind="embed" id="L6Q-db-wXD"/>
                                 </connections>
                             </containerView>
                             <slider verticalHuggingPriority="750" id="K7m-IS-NXc">
@@ -100,7 +159,7 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <sliderCell key="cell" continuous="YES" state="on" alignment="left" maxValue="100" doubleValue="50" tickMarkPosition="above" numberOfTickMarks="101" allowsTickMarkValuesOnly="YES" sliderType="linear" id="zA1-U2-c9g"/>
                                 <connections>
-                                    <action selector="sliderUpdated:" target="yt6-cb-WSe" id="4vF-fH-BeB"/>
+                                    <action selector="setBaseFrequency:" target="fYB-iD-aLb" id="h41-FS-ph6"/>
                                 </connections>
                             </slider>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="too-sD-Vho">
@@ -120,22 +179,25 @@
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                                 <connections>
-                                    <action selector="toggleAudio:" target="yt6-cb-WSe" id="YKr-2m-waI"/>
+                                    <action selector="toggleAudio:" target="fYB-iD-aLb" id="0Rz-yo-245"/>
                                 </connections>
                             </button>
                         </subviews>
                     </view>
+                    <connections>
+                        <outlet property="baseFrequencySlider" destination="K7m-IS-NXc" id="0ua-rY-Vev"/>
+                    </connections>
                 </viewController>
                 <customObject id="DcE-es-Hdg" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="76" y="702"/>
+            <point key="canvasLocation" x="53" y="663"/>
         </scene>
         <!--Tab Container View Controller-->
         <scene sceneID="DoM-xb-Xa8">
             <objects>
+                <customObject id="dOl-CP-j2l" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
                 <tabViewController selectedTabViewItemIndex="0" id="Op7-65-5v0" customClass="TabContainerViewController" customModule="Bah_Humbug" customModuleProvider="target" sceneMemberID="viewController">
                     <tabViewItems>
-                        <tabViewItem id="lrm-eu-hoc"/>
                         <tabViewItem id="AwU-1s-ymg"/>
                     </tabViewItems>
                     <tabView key="tabView" type="noTabsNoBorder" id="q0n-qD-IuE">
@@ -145,13 +207,11 @@
                         <tabViewItems/>
                     </tabView>
                     <connections>
-                        <segue destination="yt6-cb-WSe" kind="relationship" relationship="tabItems" id="MKr-CN-eea"/>
                         <segue destination="ADG-Ev-6Pq" kind="relationship" relationship="tabItems" id="EK9-vf-f4b"/>
                     </connections>
                 </tabViewController>
-                <customObject id="dOl-CP-j2l" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="76" y="1135"/>
+            <point key="canvasLocation" x="539" y="1082"/>
         </scene>
         <!--Frequency Modulation Synth-->
         <scene sceneID="cu7-CL-aYs">
@@ -178,15 +238,51 @@
                                     <action selector="sliderUpdated:" target="yt6-cb-WSe" id="DtA-Ig-PNU"/>
                                 </connections>
                             </slider>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="rbx-ho-Ks7">
+                                <rect key="frame" x="18" y="219" width="156" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Modulator Scaling Factor" id="c8h-bQ-NnO">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <slider verticalHuggingPriority="750" id="fRa-cZ-8qc">
+                                <rect key="frame" x="18" y="186" width="447" height="25"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <sliderCell key="cell" continuous="YES" state="on" alignment="left" maxValue="8" doubleValue="1" tickMarkPosition="above" numberOfTickMarks="33" allowsTickMarkValuesOnly="YES" sliderType="linear" id="VdG-kr-gcX"/>
+                                <connections>
+                                    <action selector="sliderUpdated:" target="yt6-cb-WSe" id="XIy-kc-1Gc"/>
+                                </connections>
+                            </slider>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="V3X-fz-13E">
+                                <rect key="frame" x="18" y="163" width="108" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Modulation Index" id="Xcd-Mg-NRm">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <slider verticalHuggingPriority="750" id="IKY-c8-Ts7">
+                                <rect key="frame" x="18" y="130" width="447" height="25"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <sliderCell key="cell" continuous="YES" state="on" alignment="left" maxValue="8" doubleValue="1" tickMarkPosition="above" numberOfTickMarks="100" sliderType="linear" id="pIc-Hw-wQ7"/>
+                                <connections>
+                                    <action selector="sliderUpdated:" target="yt6-cb-WSe" id="mqE-6y-l3w"/>
+                                </connections>
+                            </slider>
                         </subviews>
                     </view>
                     <connections>
                         <outlet property="carrierScalarSlider" destination="tkl-YY-qoN" id="MDF-9r-wJQ"/>
+                        <outlet property="modulationIndexSlider" destination="IKY-c8-Ts7" id="ixd-zc-XGb"/>
+                        <outlet property="modulationScalarSlider" destination="fRa-cZ-8qc" id="dp8-OO-iM7"/>
                     </connections>
                 </viewController>
                 <customObject id="HSl-j8-lJI" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="76.5" y="1615"/>
+            <point key="canvasLocation" x="53.5" y="1491"/>
         </scene>
         <!--Subtractive Synth-->
         <scene sceneID="AoE-nh-k4A">
@@ -241,7 +337,7 @@
                 </viewController>
                 <customObject id="jc9-c0-o3B" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="567" y="1615"/>
+            <point key="canvasLocation" x="539" y="1491"/>
         </scene>
     </scenes>
 </document>

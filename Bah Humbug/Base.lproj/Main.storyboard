@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" initialViewController="B8D-0N-5wS">
     <dependencies>
         <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="10117"/>
@@ -48,7 +48,7 @@
                                     </items>
                                 </menu>
                             </menuItem>
-                            <menuItem title="Edit" id="Y26-fj-ori">
+                            <menuItem title="File" id="Y26-fj-ori">
                                 <attributedString key="attributedTitle">
                                     <fragment content="File">
                                         <attributes>
@@ -151,7 +151,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="450" height="216"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <connections>
-                                    <segue destination="yt6-cb-WSe" kind="embed" id="L6Q-db-wXD"/>
+                                    <segue destination="Op7-65-5v0" kind="embed" id="jG2-9n-pP1"/>
                                 </connections>
                             </containerView>
                             <slider verticalHuggingPriority="750" id="K7m-IS-NXc">
@@ -198,6 +198,7 @@
                 <customObject id="dOl-CP-j2l" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
                 <tabViewController selectedTabViewItemIndex="0" id="Op7-65-5v0" customClass="TabContainerViewController" customModule="Bah_Humbug" customModuleProvider="target" sceneMemberID="viewController">
                     <tabViewItems>
+                        <tabViewItem id="FkG-qe-XCF"/>
                         <tabViewItem id="AwU-1s-ymg"/>
                     </tabViewItems>
                     <tabView key="tabView" type="noTabsNoBorder" id="q0n-qD-IuE">
@@ -207,11 +208,12 @@
                         <tabViewItems/>
                     </tabView>
                     <connections>
+                        <segue destination="yt6-cb-WSe" kind="relationship" relationship="tabItems" id="fSE-pz-qy6"/>
                         <segue destination="ADG-Ev-6Pq" kind="relationship" relationship="tabItems" id="EK9-vf-f4b"/>
                     </connections>
                 </tabViewController>
             </objects>
-            <point key="canvasLocation" x="539" y="1082"/>
+            <point key="canvasLocation" x="53" y="1084"/>
         </scene>
         <!--Frequency Modulation Synth-->
         <scene sceneID="cu7-CL-aYs">
@@ -282,14 +284,14 @@
                 </viewController>
                 <customObject id="HSl-j8-lJI" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53.5" y="1491"/>
+            <point key="canvasLocation" x="-204.5" y="1571"/>
         </scene>
         <!--Subtractive Synth-->
         <scene sceneID="AoE-nh-k4A">
             <objects>
                 <viewController title="Subtractive Synth" id="ADG-Ev-6Pq" customClass="SubSynthViewController" customModule="Bah_Humbug" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="a01-Uo-Rvn">
-                        <rect key="frame" x="0.0" y="0.0" width="450" height="312"/>
+                        <rect key="frame" x="0.0" y="0.0" width="483" height="312"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="knf-g7-Y6q">
@@ -337,7 +339,7 @@
                 </viewController>
                 <customObject id="jc9-c0-o3B" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="539" y="1491"/>
+            <point key="canvasLocation" x="297.5" y="1571"/>
         </scene>
     </scenes>
 </document>

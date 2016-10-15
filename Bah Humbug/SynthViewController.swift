@@ -34,15 +34,18 @@ class SynthViewController: NSViewController {
     }
     
     override func prepareForSegue(segue: NSStoryboardSegue, sender: AnyObject?) {
-        let vc = segue.destinationController as! FMSynthViewController
+        let vc = segue.destinationController as! TabContainerViewController
         vc.delegate = self
     }
 }
 
-extension SynthViewController: FMSynthViewControllerDelegate {
-    func sliderUpdated(sender: FMSynthViewController) {
-        fmsynth.carrierMultiplier = sender.carrierScalarSlider.doubleValue
-        fmsynth.modulatingMultiplier = sender.modulationScalarSlider.doubleValue
-        fmsynth.modulationIndex = sender.modulationIndexSlider.doubleValue
+extension SynthViewController: TabContainerViewControllerDelegate {
+    func setFmParams(carrierScalar: Double,
+                     modulationScalar: Double,
+                     modulationIndex: Double) {
+        print("synthviewcontroller")
+        fmsynth.carrierMultiplier = carrierScalar
+        fmsynth.modulatingMultiplier = modulationScalar
+        fmsynth.modulationIndex = modulationIndex
     }
 }

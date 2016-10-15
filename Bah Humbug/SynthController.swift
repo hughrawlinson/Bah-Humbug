@@ -9,12 +9,12 @@
 //import AudioKit
 
 class SynthController {
-    var synths = [String: Synth]()
+    //var synths = [String: Synth]()
     //var vol = AKNode()
 
     init () {
-        synths.updateValue(FMSynth(), forKey: "FMSynth")
-        synths.updateValue(SubSynth(), forKey: "SubSynth")
+        //synths.updateValue(FMSynth(), forKey: "FMSynth")
+        //synths.updateValue(SubSynth(), forKey: "SubSynth")
         
 //        synths.values.first?.getOutputNode().addConnectionPoint(vol)
         
@@ -22,9 +22,9 @@ class SynthController {
     }
     
     func setFrequency(freq :Double) {
-        for synth in synths {
-            synth.1.setFrequency(freq)
-        }
+        //for synth in synths {
+        //    synth.1.setFrequency(freq)
+        //}
     }
     
     func setOutput(key: String){
@@ -34,6 +34,14 @@ class SynthController {
     
     func setMute(mute :Bool) {
 //        mute ? AudioKit.stop() : AudioKit.start()
+    }
+}
+
+extension SynthController: TabContainerViewControllerDelegate {
+    func setFmParams(carrierScalar: Double,
+                     modulationScalar: Double,
+                     modulationIndex: Double) {
+        
     }
 }
 

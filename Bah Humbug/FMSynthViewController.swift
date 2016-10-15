@@ -25,6 +25,7 @@ class FMSynthViewController: NSViewController {
     }
     
     @IBAction func sliderUpdated(sender: AnyObject) {
+        print(self.delegate)
         self.delegate?.sliderUpdated(self)
     }
 }
